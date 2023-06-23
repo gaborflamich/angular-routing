@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container">
+    <div class="header-logo">Logo</div>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li
+          *ngFor="let item of mockData; let i = index"
+          class="header-nav-list-item"
+        >
+          <a
+            routerLink="{{ item.url }}"
+            routerLinkActive="active"
+            class="header-nav-list-item-link"
+            >{{ item.title }}</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

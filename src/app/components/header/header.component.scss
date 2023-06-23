@@ -1,0 +1,37 @@
+@use "../../../scss/shared";
+
+.header {
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  border-radius: 5px;
+  padding: 20px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-logo {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+  }
+  &-nav {
+    &-list {
+      display: flex;
+      gap: 40px;
+      justify-content: flex-end;
+      &-item {
+        font-size: 20px;
+        font-weight: 600;
+        list-style: none;
+        &-link {
+          color: white;
+          text-decoration: none;
+          &.active {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
