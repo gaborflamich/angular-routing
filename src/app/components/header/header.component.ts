@@ -15,14 +15,14 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   mockData?: IHeader[];
 
-  backHome() {
-    this.router.navigate(['/home']);
-  }
-
   constructor(
     private mockDataService: MockDataService,
     private router: Router
   ) {}
+
+  backHome() {
+    this.router.navigate(['/home']);
+  }
 
   ngOnInit() {
     this.mockData = this.mockDataService.getMockData();
