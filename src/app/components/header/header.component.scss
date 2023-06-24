@@ -16,6 +16,11 @@
     text-transform: uppercase;
     font-weight: 800;
     font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: orange;
+    }
   }
   &-nav {
     &-list {
@@ -29,6 +34,10 @@
         &-link {
           color: white;
           text-decoration: none;
+          transition: 0.5s;
+          &:hover {
+            color: orange;
+          }
           &.active {
             color: orange;
           }

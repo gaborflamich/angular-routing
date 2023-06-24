@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IHeader } from './header.definitions';
 import { MockDataService } from 'src/app/services/mock-data.service';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,14 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 export class HeaderComponent implements OnInit {
   mockData?: IHeader[];
 
-  constructor(private mockDataService: MockDataService) {}
+  backHome() {
+    this.router.navigate(['/home']);
+  }
+
+  constructor(
+    private mockDataService: MockDataService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.mockData = this.mockDataService.getMockData();
